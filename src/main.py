@@ -1,7 +1,8 @@
 import subprocess
 
 UNTRACKED_STR = "(use \"git add <file>...\" to include in what will be committed)\n"
-NO_CHANGES_STR = "no changes added to commit"
+NO_CHANGES_STR_1 = "no changes added to commit"
+NO_CHANGES_STR_2 = "nothing added to commit"
 
 def main():
     
@@ -19,11 +20,10 @@ def main():
         return
 
     # Similar logic to above
-    untracked_str = untracked_and_other.split(NO_CHANGES_STR)[0]
+    untracked_str = untracked_and_other.split(NO_CHANGES_STR_1)[0].split(NO_CHANGES_STR_2)[0]
     untracked_str = untracked_str.rstrip('\n')
     # Remove tabs
     untracked_str = untracked_str.replace('\t', '')
-    print(untracked_str)
 
     # Now we just have a string of all untracked files, separated by '\n'.
     # This is a perfect format to write over to the .gitignore file.
