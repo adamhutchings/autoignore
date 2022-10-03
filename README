@@ -12,7 +12,7 @@ following line:
 ```
 alias autoignore='python3 path/to/autoignore/src/main.py'
 ```
-to your bash profile (which is located at `~/.bashrc` on macOS and at
+to your bash profile (which is located at `~/.bash_profiles` on macOS and at
 `~/.bash_profile` on Linux), and then restart your terminal.
 
 ## Uninstall
