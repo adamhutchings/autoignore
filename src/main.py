@@ -24,6 +24,7 @@ def main():
     untracked_str = untracked_str.rstrip('\n')
     # Remove tabs
     untracked_str = untracked_str.replace('\t', '')
+    untracked_str = untracked_str.replace('.gitignore', ' ')
 
     # Now we just have a string of all untracked files, separated by '\n'.
     # This is a perfect format to write over to the .gitignore file.
